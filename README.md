@@ -1,4 +1,4 @@
-# ADIP Portal Website
+# SIH-2022 : ADIP Registration Portal For Differently-Abled Website
 
 ## [Site Is Live At](https://adip-schemes-registration-portal-for-differently-abled.up.railway.app/) : <br/> https://adip-schemes-registration-portal-for-differently-abled.up.railway.app/
 
