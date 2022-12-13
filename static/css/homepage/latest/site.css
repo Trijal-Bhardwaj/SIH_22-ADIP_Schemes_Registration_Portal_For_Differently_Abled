@@ -1,0 +1,25 @@
+
+.pagination a
+{
+    color:#555;
+}
+
+.panel ul
+{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.news-item
+{		font-size:20px;
+	font-family: Montserrat, sans-serif;
+    text-align: justify;
+    line-height: 20px;
+    padding:5px 4px;
+    font-weight:500;
+    margin:0px;
+    border-bottom:1px dotted #000000; 
+    color:black;
+}
+

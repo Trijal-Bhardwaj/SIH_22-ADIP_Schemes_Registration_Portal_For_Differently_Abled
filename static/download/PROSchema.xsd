@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PRODUCTS_LIST">
+    <xs:complexType>
+      <xs:sequence>
+			  <xs:element name="FILENAME">
+		          <xs:simpleType>
+		            <xs:restriction base="xs:string">
+		              <xs:length value="16" />
+		              <!-- file name is of 16 digit code -->
+		              <xs:pattern value="[a-zA-Z0-9/-]{5}P[0-9]{6}[0-9]{4}" />
+		            </xs:restriction>
+		          </xs:simpleType>
+		      </xs:element>
+              <xs:element name="MANUFACTURER_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="3" />
+					<xs:pattern value="([a-zA-Z0-9/-])*" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="PRODUCT">
+                <xs:complexType>
+                  <xs:sequence>
+                       <xs:element name="PRODUCT_TYPE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:length value="1"/>
+                        <xs:pattern value="B|F"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                   <xs:element minOccurs="0" name="GTIN">
+                    <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:length value="14"/>
+                            <xs:pattern value="[0-9]{14}"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="PRODUCT_NAME" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="3"/>
+                            <xs:maxLength value="50"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="GENERIC_NAME" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="3"/>
+                            <xs:maxLength value="200"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="COMPOSITION" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="3"/>
+                            <xs:maxLength value="500"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="SCHEDULED" >
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:length value="1"/>
+                        <xs:pattern value="Y|N"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+              <xs:element minOccurs="0" name="REMARK" >
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="0"/>
+                    <xs:maxLength value="200"/>
+                    <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              		<xs:element minOccurs="0" name="STORAGE_CONDITION" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="50"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-°_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                            <!-- <xs:pattern value="([a-zA-Z 0-9_.,()/=!\[\]"#%&*;<>&apos;+:?-])*"/> -->
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    <xs:element minOccurs="0" name="STRENGTH" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="50"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    <xs:element minOccurs="0" name="DOSAGE" >
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="50"/>
+                            <xs:pattern value="([a-zA-Z0-9/&amp;\.\-_`\s%\(\)!\*+,:;=&lt;&gt;])*"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+ 			  		<xs:element name="HS_CODE">
+                    	<xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:length value="8"/>
+                            <xs:pattern value="[0-9]{8}"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                 </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+</xs:schema>

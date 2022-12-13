@@ -1,0 +1,720 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Agency Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"> -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="{% static 'assets/css/ready.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/demo.css' %}">
+	<link rel="stylesheet"
+	href="{% static 'cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+<link href="{% static 'css/homepage/latest/site.css' %}" rel="stylesheet" />
+<!-- Theme skin -->
+<link href="{% static 'css/homepage/latest/color/default.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+<!-- <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"> -->
+
+
+<!-- Latest compiled and minified CSS -->
+
+
+	<style>
+		.myButton{
+		 margin: 5px;
+		 padding: 2px;
+		 color: black;
+		 border-color:white;
+		 font-size:1.1rem;
+		}
+		table.GeneratedTable {
+		  width: 100%;
+		  background-color: #ffffff;
+		  border-collapse: collapse;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  color: #000000;
+		}
+  
+		table.GeneratedTable th {
+		  text-align: center;
+		  color: white;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  border-style: solid;
+		  padding: 3px;
+		}
+  
+		table.GeneratedTable td {
+		  text-align: center;
+		  border-width: 1px;
+		  border-color: darkgray;
+		  border-style: solid;
+		  padding: 3px;
+		}
+  
+		table.GeneratedTable thead {
+		  text-align: center;
+		  background-color: #408080;
+		}
+		@media screen and (max-width: 992px) {
+			body {
+				background-color: blue;
+			}
+			.main-header{
+				height: 5rem;
+			}
+		}
+		 </style>
+</head>
+<body>
+		
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					<div class="logo pull-left">
+						<a> <img src="https://cdn.discordapp.com/attachments/947929316623278104/956773546732953601/Banner_Image.jpeg"  style="height:100%; width:100%">
+						</a>
+					</div>
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav style="    background-color: #244270 !important;
+			border-color: #0f2951 !important;" class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+					<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+						<div class="input-group">
+							<input type="text" placeholder="Search ..." class="form-control">
+							<div class="input-group-append">
+								<span class="input-group-text">
+									<i class="la la-search search-icon"></i>
+								</span>
+							</div>
+						</div>
+					</form>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i style="color: white;"class="la la-envelope"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<!-- <li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="la la-bell"></i>
+								<span class="notification">3</span>
+							</a>
+							<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-center">
+										<a href="#">
+											<div class="notif-icon notif-primary"> <i class="la la-user-plus"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													New user registered
+												</span>
+												<span class="time">5 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-success"> <i class="la la-comment"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Rahmad commented on Admin
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-img"> 
+												<img src="{% static 'assets/img/profile2.jpg" alt="Img Profile">
+											</div>
+											<div class="notif-content">
+												<span class="block">
+													Reza send messages to you
+												</span>
+												<span class="time">12 minutes ago</span> 
+											</div>
+										</a>
+										<a href="#">
+											<div class="notif-icon notif-danger"> <i class="la la-heart"></i> </div>
+											<div class="notif-content">
+												<span class="block">
+													Farrah liked Admin
+												</span>
+												<span class="time">17 minutes ago</span> 
+											</div>
+										</a>
+									</div> -->
+								</li>
+								<li>
+									<a style="color: white;" class="see-all" href="javascript:void(0);"> <strong>See all notifications</strong> <i class="la la-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="{% static 'assets/img/profile.png' %}" alt="user-img" width="36" class="img-circle"><span style="color: white;">Vikash Foundation</span></span> </a>
+							<ul class="dropdown-menu dropdown-user">
+								<li>
+									<div class="user-box">
+										<div class="u-img"><img src="{% static 'assets/img/profile.png' %}" alt="user"></div>
+										<div class="u-text">
+											<h4>Vikash Foundation</h4>
+											<p class="text-muted">hello@themekita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+										</div>
+									</li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a>
+									<a class="dropdown-item" href="#"></i> My Balance</a>
+									<a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+								</ul>
+								<!-- /.dropdown-user -->
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					<div class="user">
+						<div class="photo">
+							<img src="{% static 'assets/img/profile.png' %}">
+						</div>
+						<div class="info">
+							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Vikash Foundation
+									<span class="user-level">Implementing Agency</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample" aria-expanded="true" >
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Edit Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Settings</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="">
+								<i class="la la-dashboard"></i>
+								<p>Dashboard</p>
+								<span class="badge badge-count">5</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="components.html">
+								<i class="la la-table"></i>
+								<p> Pending Request</p>
+								<span class="badge badge-count">14</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="forms.html">
+								<i class="la la-keyboard-o"></i>
+								<p>Update Details</p>
+								<span class="badge badge-count">50</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="tables.html">
+								<i class="la la-th"></i>
+								<p>Tables</p>
+								<span class="badge badge-count">6</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="notifications.html">
+								<i class="la la-bell"></i>
+								<p>Notifications</p>
+								<span class="badge badge-success">3</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="typography.html">
+								<i class="la la-font"></i>
+								<p>Typography</p>
+								<span class="badge badge-danger">25</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="icons.html">
+								<i class="la la-fonticons"></i>
+								<p>Icons</p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+			
+					
+							
+							
+							
+
+	<form style="border:2px solid gray; border-radius: 20px; margin-top:5rem;">
+		<h5 style="margin: 2rem 0 0 2rem; color:darkblue !important"> Beneficiary Details </h5>
+		<!-- /***************************************************************************************************
+		-->
+		<div  id="filter">
+			<form style = "display:flex">
+				
+			</form>
+		</div>
+		<!-- ************************************************************************************************ -->
+		<form method="post" action="../apply_filter/">
+		{% csrf_token %}
+		<div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<label for="inputState">State</label>
+			<select class="form-control" id="inputState" name="state">
+								<option value="SelectState">Select State</option>
+								<option value="Andra Pradesh">Andra Pradesh</option>
+								<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Goa">Goa</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal Pradesh">Himachal Pradesh</option>
+								<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Madya Pradesh">Madya Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Manipur">Manipur</option>
+								<option value="Meghalaya">Meghalaya</option>
+								<option value="Mizoram">Mizoram</option>
+								<option value="Nagaland">Nagaland</option>
+								<option value="Orissa">Orissa</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Sikkim">Sikkim</option>
+								<option value="Tamil Nadu">Tamil Nadu</option>
+								<option value="Telangana">Telangana</option>
+								<option value="Tripura">Tripura</option>
+								<option value="Uttaranchal">Uttaranchal</option>
+								<option value="Uttar Pradesh">Uttar Pradesh</option>
+								<option value="West Bengal">West Bengal</option>
+								<option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+								<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+								<option value="Chandigarh">Chandigarh</option>
+								<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+								<option value="Daman and Diu">Daman and Diu</option>
+								<option value="Delhi">Delhi</option>
+								<option value="Lakshadeep">Lakshadeep</option>
+								<option value="Pondicherry">Pondicherry</option>
+							  </select>
+		  </div>
+		  <div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<label for="inputDistrict">District</label>
+			<select class="form-control" id="inputDistrict" name="district">
+				<option value="">-- select one -- </option>
+			</select>
+		  </div>
+		
+		
+		
+		<!-- <div class="form-group col-sm-3 col-xs-6 col-lg-12"> -->
+	
+		<div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<select data-filter="model" class="filter-model filter form-control" name="gender">
+				<option value="">Select Gender</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Other">Other</option>
+
+			</select>
+		</div>
+		<div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<select data-filter="type" class="filter-type filter form-control" name="disability_type">
+				<option value="Disability Type">Disability Type</option>
+				<option value="Locomoter Disabled">Locomoter Disabled</option>
+				<option value="Visual Disability">Visual Disability</option>
+				<option value="Hearing Disability">Hearing Disability</option>
+				<option value="Mental Disability">Mental Disability</option>
+				<option value="Multiple Disability">Multiple Disability</option>
+
+			</select>
+		</div>
+	
+		<div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<select data-filter="type" class="filter-type filter form-control" name="category">
+				<option value="Category">Category</option>
+				<option value="General">General</option>
+				<option value="SC/ST">SC/ST</option>
+				<option value="OBC">OBC</option>
+				<option value="Other">Other</option>
+
+			</select>
+		</div>
+		<div class="form-group col-sm-3 col-xs-6  col-lg-12">
+			<!-- <select data-filter="price" class="filter-price filter form-control">
+				<option value="">Select Price Range</option>
+				<option value="">Show All</option>
+			</select> -->
+			<label for="date">Select a Date :</label>
+			<input type="date" id="date" name="start_date">
+		</div>
+
+		<button type="submit" class="btn btn-primary" style="margin-left: 15rem;" onclick="fetchFilter()">Apply Filters</button>
+	</form>
+		<form action="../change-status/" method="post">
+			{% csrf_token %}
+		<table
+		class="GeneratedTable"
+		style="width: 95%; margin: auto; margin-bottom: 2rem;  margin-top:2rem; font-size:0.8rem;"
+		>
+		<thead style="background-color: #539BBD !important;">
+			<tr>
+				<th style="width: 1%">S.No.</th>
+				<th style="width: 9%">Beneficiary Name</th>
+				<th style="width: 9%;">Father Name</th>
+          <th style="width: 9%">Mother Name</th>
+          <th style="width: 6%">Date Of Birth</th>
+          <th style="width: 4%">Category</th>
+          <th style="width: 20%">Address</th>
+          <th style="width: 7%">Aadhar Card No.</th>
+          <th style="width: 10%">UDID No.</th>
+          <th style="width: 7%">Mobile No.</th>
+          <th style="width: 10%">Disability Type</th>
+          <th style="width: 4%">Disability Percentage</th>
+		  <th style="width: 4%">Documents</th>
+		  <th style="width: 4%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+		  <!-- <td></pe="radio" /></td> -->
+		  {% if context %}
+		  {% for details in context %}
+		  <tr style="background-color: #F2F2F2;">
+			{% for key, value in details.items %}
+				{% if key != "Status" %}
+					{% if key == "Documents"%}
+						<td>
+							<a href="{{ value.0 }}">Disability Certificate</a>
+							<a href="{{ value.1 }}">Caste Certificate</a>
+							<a href="{{ value.2 }}">Income Certificate</a>
+							<a href="{{ value.3 }}">Photo</a>
+						</td>
+					{% else %}
+						<td>{{ value }}</td>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+			<td>
+				  {% if details.Status == '3' %}
+						<span>Rejected</span>
+						<!-- <button type="button" name="schemeSuggest" class="btn btn-warning">Suggest Schemes</button> -->
+						<!-- <div></div> -->
+				  {% elif details.Status == '2' %}
+				   <!-- Code for Accepted -->
+						<span>Accepted</span>
+						<button type="button" name="schemeSuggest" class="btn btn-warning" onclick="loadSchemes()">Suggest Schemes</button>
+				  {% else %}
+						<input type="hidden" value="{{ details.udid }}" name = "udid">
+						<input type="hidden" value="{{ username }}" name = "username">
+						<input type="hidden" value="accepted" name = "accepted">
+						<button type="submit" name="accept" class="myButton" style="background-color: greenyellow;">Accept</button>
+						<button type="button" name="reject" class = "myButton" style="background-color: red;" data-toggle="modal" data-target="#exampleModalCenter">
+							Reject
+						</button>
+					<!-- Modal -->
+					<!-- Button trigger modal -->
+					<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					Launch demo modal
+					</button>
+					-->
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Add Comment</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+		
+					<div class="modal-body">
+							<input type="text" id="w3review" name="comment" rows="4" cols="50" style="font-size: 1rem; padding: 0 0 225px 0; height: 250px; width: 450px"></input>
+							<br>
+							<!-- <input type="submit" value="Submit"> -->
+					</div>
+					<div class="modal-footer">
+					<button type="submit" name="send" class="btn btn-secondary" data-dismiss="modal">Send</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+					</div>
+					
+					</div>
+					</div>
+					</div>
+					{% endif %}
+				</td>
+		  </tr>
+		  {% endfor %}
+		  <!-- {% else %}
+		  <td>1.</td>
+          <td>Rahul Sharma</td>
+          <td>Pankaj Sharma</td>
+          <td>Reena Sharma</td>
+          <td>12/04/1992</td>
+          <td>General</td>
+          <td>C-216, Surya Nagar, Delhi-110092</td>
+          <td>1234 5678 99</td>
+          <td>DL2310119470007106</td>
+          <td>9898989898</td>
+          <td>Locomotive Disability</td>
+          <td>60%</td>
+		  <td><a href="{% static 'download/adip1.pdf' %}" target="_blank" title="Click Here"><i style="    display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			color: #e0a51f;
+			font-weight: 600 !important;" class="orange bold fa fa-file-pdf-o fa-1x pad-right half"></i></a></td>
+			
+		  {% endif %} -->
+		</tbody>
+    </table>
+</fieldset>
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+	function loadSchemes(){
+		window.location.href = "..schemes";
+	}
+	function fetchFilter(formData){
+		console.log(formData);
+		// fetch('../apply_filter/?state=alimco')
+		// 	.then(res => res.json())
+		// 	.then((out) => {
+		// 		 console.log('Output: ', out);
+		// }).catch(err => console.error(err));
+	}
+	var AndraPradesh = ["Anantapur","Chittoor","East Godavari","Guntur","Kadapa","Krishna","Kurnool","Prakasam","Nellore","Srikakulam","Visakhapatnam","Vizianagaram","West Godavari"];
+var ArunachalPradesh = ["Anjaw","Changlang","Dibang Valley","East Kameng","East Siang","Kra Daadi","Kurung Kumey","Lohit","Longding","Lower Dibang Valley","Lower Subansiri","Namsai","Papum Pare","Siang","Tawang","Tirap","Upper Siang","Upper Subansiri","West Kameng","West Siang","Itanagar"];
+var Assam = ["Baksa","Barpeta","Biswanath","Bongaigaon","Cachar","Charaideo","Chirang","Darrang","Dhemaji","Dhubri","Dibrugarh","Goalpara","Golaghat","Hailakandi","Hojai","Jorhat","Kamrup Metropolitan","Kamrup (Rural)","Karbi Anglong","Karimganj","Kokrajhar","Lakhimpur","Majuli","Morigaon","Nagaon","Nalbari","Dima Hasao","Sivasagar","Sonitpur","South Salmara Mankachar","Tinsukia","Udalguri","West Karbi Anglong"];
+var Bihar = ["Araria","Arwal","Aurangabad","Banka","Begusarai","Bhagalpur","Bhojpur","Buxar","Darbhanga","East Champaran","Gaya","Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria","Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger","Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas","Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"];
+var Chhattisgarh = ["Balod","Baloda Bazar","Balrampur","Bastar","Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband","Janjgir Champa","Jashpur","Kabirdham","Kanker","Kondagaon","Korba","Koriya","Mahasamund","Mungeli","Narayanpur","Raigarh","Raipur","Rajnandgaon","Sukma","Surajpur","Surguja"];
+var Goa = ["North Goa","South Goa"];
+var Gujarat = ["Ahmedabad","Amreli","Anand","Aravalli","Banaskantha","Bharuch","Bhavnagar","Botad","Chhota Udaipur","Dahod","Dang","Devbhoomi Dwarka","Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"];
+var Haryana = ["Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Mewat","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamunanagar"];
+var HimachalPradesh = ["Bilaspur","Chamba","Hamirpur","Kangra","Kinnaur","Kullu","Lahaul Spiti","Mandi","Shimla","Sirmaur","Solan","Una"];
+var JammuKashmir = ["Anantnag","Bandipora","Baramulla","Budgam","Doda","Ganderbal","Jammu","Kargil","Kathua","Kishtwar","Kulgam","Kupwara","Leh","Poonch","Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"];
+var Jharkhand = ["Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum","Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara","Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgarh","Ranchi","Sahebganj","Seraikela Kharsawan","Simdega","West Singhbhum"];
+var Karnataka = ["Bagalkot","Bangalore Rural","Bangalore Urban","Belgaum","Bellary","Bidar","Vijayapura","Chamarajanagar","Chikkaballapur","Chikkamagaluru","Chitradurga","Dakshina Kannada","Davanagere","Dharwad","Gadag","Gulbarga","Hassan","Haveri","Kodagu","Kolar","Koppal","Mandya","Mysore","Raichur","Ramanagara","Shimoga","Tumkur","Udupi","Uttara Kannada","Yadgir"];
+var Kerala = ["Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam","Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"];
+var MadhyaPradesh = ["Agar Malwa","Alirajpur","Anuppur","Ashoknagar","Balaghat","Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Hoshangabad","Indore","Jabalpur","Jhabua","Katni","Khandwa","Khargone","Mandla","Mandsaur","Morena","Narsinghpur","Neemuch","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Satna",
+"Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli","Tikamgarh","Ujjain","Umaria","Vidisha"];
+var Maharashtra = ["Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara","Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai Suburban","Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha","Washim","Yavatmal"];
+var Manipur = ["Bishnupur","Chandel","Churachandpur","Imphal East","Imphal West","Jiribam","Kakching","Kamjong","Kangpokpi","Noney","Pherzawl","Senapati","Tamenglong","Tengnoupal","Thoubal","Ukhrul"];
+var Meghalaya = ["East Garo Hills","East Jaintia Hills","East Khasi Hills","North Garo Hills","Ri Bhoi","South Garo Hills","South West Garo Hills","South West Khasi Hills","West Garo Hills","West Jaintia Hills","West Khasi Hills"];
+var Mizoram = ["Aizawl","Champhai","Kolasib","Lawngtlai","Lunglei","Mamit","Saiha","Serchhip","Aizawl","Champhai","Kolasib","Lawngtlai","Lunglei","Mamit","Saiha","Serchhip"];
+var Nagaland = ["Dimapur","Kiphire","Kohima","Longleng","Mokokchung","Mon","Peren","Phek","Tuensang","Wokha","Zunheboto"];
+var Odisha = ["Angul","Balangir","Balasore","Bargarh","Bhadrak","Boudh","Cuttack","Debagarh","Dhenkanal","Gajapati","Ganjam","Jagatsinghpur","Jajpur","Jharsuguda","Kalahandi","Kandhamal","Kendrapara","Kendujhar","Khordha","Koraput","Malkangiri","Mayurbhanj","Nabarangpur","Nayagarh","Nuapada","Puri","Rayagada","Sambalpur","Subarnapur","Sundergarh"];
+var Punjab = ["Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka","Firozpur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Mansa","Moga","Mohali","Muktsar","Pathankot","Patiala","Rupnagar","Sangrur","Shaheed Bhagat Singh Nagar","Tarn Taran"];
+var Rajasthan = ["Ajmer","Alwar","Banswara","Baran","Barmer","Bharatpur","Bhilwara","Bikaner","Bundi","Chittorgarh","Churu","Dausa","Dholpur","Dungarpur","Ganganagar","Hanumangarh","Jaipur","Jaisalmer","Jalore","Jhalawar","Jhunjhunu","Jodhpur","Karauli","Kota","Nagaur","Pali","Pratapgarh","Rajsamand","Sawai Madhopur","Sikar","Sirohi","Tonk","Udaipur"];
+var Sikkim = ["East Sikkim","North Sikkim","South Sikkim","West Sikkim"];
+var TamilNadu = ["Ariyalur","Chennai","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kanchipuram","Kanyakumari","Karur","Krishnagiri","Madurai","Nagapattinam","Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram","Salem","Sivaganga","Thanjavur","Theni","Thoothukudi","Tiruchirappalli","Tirunelveli","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur","Vellore","Viluppuram","Virudhunagar"];
+var Telangana = ["Adilabad","Bhadradri Kothagudem","Hyderabad","Jagtial","Jangaon","Jayashankar","Jogulamba","Kamareddy","Karimnagar","Khammam","Komaram Bheem","Mahabubabad","Mahbubnagar","Mancherial","Medak","Medchal","Nagarkurnool","Nalgonda","Nirmal","Nizamabad","Peddapalli","Rajanna Sircilla","Ranga Reddy","Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy","Warangal Rural","Warangal Urban","Yadadri Bhuvanagiri"];
+var Tripura = ["Dhalai","Gomati","Khowai","North Tripura","Sepahijala","South Tripura","Unakoti","West Tripura"];
+var UttarPradesh = ["Agra","Aligarh","Allahabad","Ambedkar Nagar","Amethi","Amroha","Auraiya","Azamgarh","Baghpat","Bahraich","Ballia","Balrampur","Banda","Barabanki","Bareilly","Basti","Bhadohi","Bijnor","Budaun","Bulandshahr","Chandauli","Chitrakoot","Deoria","Etah","Etawah","Faizabad","Farrukhabad","Fatehpur","Firozabad","Gautam Buddha Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hapur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur Dehat","Kanpur Nagar","Kasganj","Kaushambi","Kheri","Kushinagar","Lalitpur","Lucknow","Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut","Mirzapur","Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh","Raebareli","Rampur","Saharanpur","Sambhal","Sant Kabir Nagar","Shahjahanpur","Shamli","Shravasti","Siddharthnagar","Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"];
+var Uttarakhand  = ["Almora","Bageshwar","Chamoli","Champawat","Dehradun","Haridwar","Nainital","Pauri","Pithoragarh","Rudraprayag","Tehri","Udham Singh Nagar","Uttarkashi"];
+var WestBengal = ["Alipurduar","Bankura","Birbhum","Cooch Behar","Dakshin Dinajpur","Darjeeling","Hooghly","Howrah","Jalpaiguri","Jhargram","Kalimpong","Kolkata","Malda","Murshidabad","Nadia","North 24 Parganas","Paschim Bardhaman","Paschim Medinipur","Purba Bardhaman","Purba Medinipur","Purulia","South 24 Parganas","Uttar Dinajpur"];
+var AndamanNicobar = ["Nicobar","North Middle Andaman","South Andaman"];
+var Chandigarh = ["Chandigarh"];
+var DadraHaveli = ["Dadra Nagar Haveli"];
+var DamanDiu = ["Daman","Diu"];
+var Delhi = ["Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi","North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi","West Delhi"];
+var Lakshadweep = ["Lakshadweep"];
+var Puducherry = ["Karaikal","Mahe","Puducherry","Yanam"];
+
+
+$("#inputState").change(function(){
+  var StateSelected = $(this).val();
+  var optionsList;
+  var htmlString = "";
+
+  switch (StateSelected) {
+    case "Andra Pradesh":
+        optionsList = AndraPradesh;
+        break;
+    case "Arunachal Pradesh":
+        optionsList = ArunachalPradesh;
+        break;
+    case "Assam":
+        optionsList = Assam;
+        break;
+    case "Bihar":
+        optionsList = Bihar;
+        break;
+    case "Chhattisgarh":
+        optionsList = Chhattisgarh;
+        break;
+    case "Goa":
+        optionsList = Goa;
+        break;
+    case  "Gujarat":
+        optionsList = Gujarat;
+        break;
+    case "Haryana":
+        optionsList = Haryana;
+        break;
+    case "Himachal Pradesh":
+        optionsList = HimachalPradesh;
+        break;
+    case "Jammu and Kashmir":
+        optionsList = JammuKashmir;
+        break;
+    case "Jharkhand":
+        optionsList = Jharkhand;
+        break;
+    case  "Karnataka":
+        optionsList = Karnataka;
+        break;
+    case "Kerala":
+        optionsList = Kerala;
+        break;
+    case  "Madya Pradesh":
+        optionsList = MadhyaPradesh;
+        break;
+    case "Maharashtra":
+        optionsList = Maharashtra;
+        break;
+    case  "Manipur":
+        optionsList = Manipur;
+        break;
+    case "Meghalaya":
+        optionsList = Meghalaya ;
+        break;
+    case  "Mizoram":
+        optionsList = Mizoram;
+        break;
+    case "Nagaland":
+        optionsList = Nagaland;
+        break;
+    case  "Orissa":
+        optionsList = Orissa;
+        break;
+    case "Punjab":
+        optionsList = Punjab;
+        break;
+    case  "Rajasthan":
+        optionsList = Rajasthan;
+        break;
+    case "Sikkim":
+        optionsList = Sikkim;
+        break;
+    case  "Tamil Nadu":
+        optionsList = TamilNadu;
+        break;
+    case  "Telangana":
+        optionsList = Telangana;
+        break;
+    case "Tripura":
+        optionsList = Tripura ;
+        break;
+    case  "Uttaranchal":
+        optionsList = Uttaranchal;
+        break;
+    case  "Uttar Pradesh":
+        optionsList = UttarPradesh;
+        break;
+    case "West Bengal":
+        optionsList = WestBengal;
+        break;
+    case  "Andaman and Nicobar Islands":
+        optionsList = AndamanNicobar;
+        break;
+    case "Chandigarh":
+        optionsList = Chandigarh;
+        break;
+    case  "Dadar and Nagar Haveli":
+        optionsList = DadraHaveli;
+        break;
+    case "Daman and Diu":
+        optionsList = DamanDiu;
+        break;
+    case  "Delhi":
+        optionsList = Delhi;
+        break;
+    case "Lakshadeep":
+        optionsList = Lakshadeep ;
+        break;
+    case  "Pondicherry":
+        optionsList = Pondicherry;
+        break;
+}
+
+
+  for(var i = 0; i < optionsList.length; i++){
+    htmlString = htmlString+"<option value='"+ optionsList[i] +"'>"+ optionsList[i] +"</option>";
+  }
+  $("#inputDistrict").html(htmlString);
+
+});
+	</script>
+<script src="{% static 'assets/js/core/jquery.3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js' %}"></script>
+<script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/chartist/chartist.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js' %}"></script>
+<!-- <script src="{% static 'assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js' %}"></script> -->
+<script src="{% static 'assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-mapael/jquery.mapael.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-mapael/maps/world_countries.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/chart-circle/circles.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
+<script src="{% static 'assets/js/ready.min.js' %}"></script>
+<script src="{% static 'assets/js/demo.js' %}"></script>
+</html>
