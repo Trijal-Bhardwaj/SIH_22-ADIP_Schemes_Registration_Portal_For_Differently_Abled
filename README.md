@@ -1,6 +1,6 @@
 # SIH-2022 : ADIP Registration Portal For Differently-Abled
 
-## [Site Is Live At](https://adip-schemes-registration-portal-for-differently-abled.up.railway.app/) : <br/> https://sih-adip-production.up.railway.app/
+## [Site Is Live At](https://adip-schemes-registration-portal-for-differently-abled.up.railway.app/) : <br/> https://adip-schemes-registration-portal-for-differently-abled.up.railway.app/
 
 ## [Demo Video of Working of ADIP Portal Project](https://www.youtube.com/watch?v=98VgY5hn2Z4) : <br/> https://www.youtube.com/watch?v=98VgY5hn2Z4
 ## [ADIP Portal Project Idea Power Point Presentation](https://docs.google.com/presentation/d/1q25eOrOBxc8qtjwUIi1PfwTCLZ9DPhBT/edit#slide=id.p4) : <br/> https://docs.google.com/presentation/d/1q25eOrOBxc8qtjwUIi1PfwTCLZ9DPhBT/edit#slide=id.p4
